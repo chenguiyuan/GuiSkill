@@ -21,10 +21,17 @@
 
 **如何使用**：
 
-1. 把 [`2sigma-learning/SKILL.md`](./2sigma-learning/SKILL.md) 放入你的 Claude Code 项目的 `.agents/skills/2sigma-learning/` 目录
-2. 在聊天框发送：
-   > "我要开始学习 [材料名称]，请调用 2sigma-learning 技能帮我开始。"
-3. AI 会自动初始化学习项目，生成第一个学习文件
+在你的项目根目录运行以下命令，一键安装：
+
+```bash
+curl -o .agents/skills/2sigma-learning/SKILL.md --create-dirs \
+  https://raw.githubusercontent.com/chenguiyuan/GuiSkill/main/2sigma-learning/SKILL.md
+```
+
+然后在聊天框发送：
+> "我要开始学习 [材料名称]，请调用 2sigma-learning 技能帮我开始。"
+
+AI 会自动初始化学习项目，生成第一个学习文件。
 
 详细的执行流程、AI 行为约束见 [SKILL.md](./2sigma-learning/SKILL.md)。
 
