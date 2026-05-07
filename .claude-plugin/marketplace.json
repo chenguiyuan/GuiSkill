@@ -1,0 +1,22 @@
+{
+  "name": "guiskill",
+  "owner": {
+    "name": "chenguiyuan"
+  },
+  "metadata": {
+    "description": "桂圆的 Claude Code 技能库",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "2sigma-learning",
+      "description": "基于 Bloom 2 Sigma 效应的 AI 自适应一对一学习法。AI 生成内容 → 你在文件里反馈 → AI 读取反馈生成下一轮，跳过已知、深挖盲区。",
+      "source": "./",
+      "strict": false,
+      "version": "1.0.0",
+      "category": "learning",
+      "keywords": ["learning", "bloom", "adaptive", "tutoring", "chinese"],
+      "skills": ["./2sigma-learning"]
+    }
+  ]
+}

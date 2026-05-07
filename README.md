@@ -2,7 +2,15 @@
 
 桂圆的个人 Skill 库——收录我为 Claude Code 定制的学习与工作流技能。
 
-每个 Skill 都是一个独立的文件夹，包含 `SKILL.md`（技能定义文件）。
+## 安装
+
+```bash
+npx skills add chenguiyuan/GuiSkill
+```
+
+安装后在 Claude Code 里执行 `/reload-plugins` 激活。
+
+**更新方式与安装相同，重新运行一次即可。**
 
 ---
 
@@ -10,33 +18,38 @@
 
 ### [2sigma-learning](./2sigma-learning/SKILL.md) — AI 自适应学习法
 
-基于布鲁姆 2 Sigma 效应的 1 对 1 学习技能。
+基于布鲁姆 **2 Sigma 效应**的一对一学习技能。
 
-**核心机制**：AI 生成学习文件 → 你在文件末尾写反馈 → AI 读取反馈决定下一步，循环往复。跳过你已知的内容，深挖你卡住的地方。
+普通课堂教学只能让学生达到平均水平，而一对一辅导可以让同一个学生超越 98% 的同班同学。2sigma-learning 把这个效应复现到 AI 学习场景里：
 
-**适用场景**：
-- 学习一套方法论（如商业写作、对标分析）
-- 啃硬核书籍或哲学著作
-- 把理论概念转化为你自己的具体行动
+> AI 生成学习文件 → 你在文件末尾写真实反馈 → AI 读取反馈决定下一步，循环往复
 
-**如何使用**：
+已掌握的跳过，卡住的反复拆解，始终锚定你的真实理解盲区。
 
-在你的项目根目录运行以下命令，一键安装：
+**适用场景：**
+- 学习一套陌生方法论
+- 啃需要反复咀嚼的文本
+- 把理论转化成你自己的行动方案
 
-```bash
-curl -o .agents/skills/2sigma-learning/SKILL.md --create-dirs \
-  https://raw.githubusercontent.com/chenguiyuan/GuiSkill/main/2sigma-learning/SKILL.md
+**触发方式：**
 ```
-
-然后在聊天框发送：
-> "我要开始学习 [材料名称]，请调用 2sigma-learning 技能帮我开始。"
-
-AI 会自动初始化学习项目，生成第一个学习文件。
-
-详细的执行流程、AI 行为约束见 [SKILL.md](./2sigma-learning/SKILL.md)。
+用 2sigma-learning 开始学习 [材料名称或内容]
+```
 
 ---
 
-## 使用方式
+## 结构
 
-将任意 Skill 的文件夹复制到你的项目 `.agents/skills/` 目录下即可激活。
+```
+GuiSkill/
+├── .claude-plugin/
+│   └── marketplace.json
+└── 2sigma-learning/
+    └── SKILL.md
+```
+
+---
+
+## License
+
+MIT
