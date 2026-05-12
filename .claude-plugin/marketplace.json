@@ -17,6 +17,16 @@
       "category": "learning",
       "keywords": ["learning", "bloom", "adaptive", "tutoring", "chinese"],
       "skills": ["./2sigma-learning"]
+    },
+    {
+      "name": "wechat-format",
+      "description": "将文章 Markdown 或纯文本转换为可一键复制到微信公众号编辑器的 HTML 文件，忠实翻译原文结构，完整保留背景色、字色、圆角等所有样式。",
+      "source": "./",
+      "strict": false,
+      "version": "1.0.0",
+      "category": "writing",
+      "keywords": ["wechat", "html", "formatting", "chinese", "公众号", "排版"],
+      "skills": ["./wechat-format"]
     }
   ]
 }

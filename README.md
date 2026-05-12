@@ -38,14 +38,39 @@ npx skills add chenguiyuan/GuiSkill
 
 ---
 
+### [wechat-format](./wechat-format/SKILL.md) — 微信公众号 HTML 排版
+
+将文章 Markdown 或纯文本一键生成可粘贴到公众号编辑器的 HTML 文件，所有样式（背景色、字色、圆角、badge、引用块）完整保留。
+
+核心原理：忠实翻译原文已有的结构，不强加模板。有编号标题就生成 badge 组件，有引用块就生成金句块，纯叙述文章就只生成段落——原文是什么结构，HTML 就是什么结构。
+
+**技术亮点：**
+- 用 copy 事件监听绕过微信 sanitizer 的强过滤路径，样式保留率接近 100%
+- 所有块级容器使用 `<section>`（微信保留其 inline style），禁用 `<div>`
+
+**适用场景：**
+- 公众号文章排版
+- 快速生成带格式的公众号草稿
+
+**触发方式：**
+```
+帮我排版 / 公众号排版 / 微信排版 / 做成公众号格式
+```
+
+---
+
 ## 结构
 
 ```
 GuiSkill/
 ├── .claude-plugin/
 │   └── marketplace.json
-└── 2sigma-learning/
-    └── SKILL.md
+├── 2sigma-learning/
+│   └── SKILL.md
+└── wechat-format/
+    ├── SKILL.md
+    └── references/
+        └── tech-notes.md
 ```
 
 ---
